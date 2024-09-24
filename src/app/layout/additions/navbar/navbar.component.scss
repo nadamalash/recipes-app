@@ -1,0 +1,59 @@
+@import "../../../../styles.scss";
+
+.navbar{
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+}
+.navbar-brand img {
+  height: 60px;
+  width: auto;
+}
+
+.nav-link:focus {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 8px;
+}
+.dropdown .nav-link:focus {
+  text-decoration: none;
+  color: $primary;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-icon {
+  fill: $dark;
+}
+.dropdown-toggle:focus .dropdown-icon,
+.dropdown-toggle:hover .dropdown-icon {
+  fill: $primary;
+  transition: transform 0.2s;
+  transform: rotate(180deg);
+}
+
+.dropdown-menu > li :hover {
+  background-color: $light;
+}
+
+.dropdown-menu > li :focus {
+  background-color: $light;
+  color: $dark;
+}
+
+.dropdown-menu > li > a:link {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.dropdown-menu > li > a > svg {
+  fill: $primary;
+  width: 30px;
+  margin-right:10px;
+  margin-top: -10px;
+  height: auto;
+  stroke: $primary;
+  
+}

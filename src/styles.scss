@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+//Fonts
+$font-family-sans-serif: "Inter", sans-serif;
+
+//Colors
+$primary: #ff8800;
+$secondary: #858585;
+$light: #fefae0;
+$dark: #020202;
+
+//Borders
+$border-widths: (
+  0: 0px,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+);
+
+//Navbar
+$navbar-padding-y: 1rem;
+$navbar-light-color: $dark;
+$navbar-light-icon-color: $dark;
+$navbar-light-hover-color: $primary;
+$navbar-toggler-focus-width: 0rem;
+$nav-link-font-size: 17px;
+
+//Shadow
+$box-shadow: 0 0.5rem 1rem rgba($dark, 0.05);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
