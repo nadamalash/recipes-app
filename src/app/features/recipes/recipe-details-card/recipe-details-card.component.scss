@@ -1,0 +1,41 @@
+$primary: #ff8800;
+.card {
+  width: 58.3rem;
+  aspect-ratio: 2;
+  .left {
+    height: 100%;
+    img {
+      object-fit: cover;
+    }
+
+    .badge-card {
+      top: 1.56rem;
+      left: 1.56rem;
+      transform: scale(1);
+      transition: transform 0.3s ease;
+      ::ng-deep app-category-icon {
+        svg {
+          fill: $primary;
+          height: 1.5rem;
+          transform: translate(-7%, -12%);
+        }
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .right {
+    height: 100%;
+  }
+  @media (max-width: 991.98px) {
+    width: 23rem;
+    aspect-ratio: 0.7;
+    .left {
+      height: 50%;
+    }
+    .right {
+      height: 50%;
+    }
+  }
+}

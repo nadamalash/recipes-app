@@ -1,0 +1,22 @@
+$primary: #ff8800;
+img {
+  height: 2.5rem;
+  width: 6.03rem;
+  transform: translate(-0.5rem, -1rem);
+}
+hr {
+  width: 90%;
+}
+
+::ng-deep app-category-icon svg {
+  fill: $primary;
+  width: 2rem;
+  height: 1.8rem;
+  transform: translate(0%, -10%);
+}
+
+a {
+  &:hover {
+    color: $primary !important;
+  }
+}

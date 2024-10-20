@@ -1,0 +1,40 @@
+<header>
+  <div class="container-fluid vh-100 position-relative">
+    <!-- Background -->
+    <svg class="h-100 position-absolute top-0 end-0" viewBox="0 0 345 625" xmlns="http://www.w3.org/2000/svg">
+      <path opacity="0.3"
+        d="M56.6667 625L94.1667 572.917C131.667 520.833 206.667 416.667 198.854 312.5C191.042 208.333 100.417 104.167 55.1042 52.0833L9.79169 0H329.583L321.771 52.0833C313.958 104.167 298.333 208.333 254.583 312.5C210.833 416.667 138.958 520.833 103.021 572.917L67.0834 625H56.6667Z"
+        fill="#FFBE0B" fill-opacity="0.25" />
+      <path
+        d="M56.9791 625L92.9166 572.917C128.854 520.833 200.729 416.667 244.479 312.5C288.229 208.333 303.854 104.167 311.667 52.0833L319.479 0H526.771V52.0833C526.771 104.167 526.771 208.333 526.771 312.5C526.771 416.667 526.771 520.833 526.771 572.917V625H56.9791Z"
+        fill="#FFBE0B" fill-opacity="0.3" />
+    </svg>
+
+    <!-- Header Section Content -->
+    <div class="page-padding container mb-5 h-100">
+      <div class="row h-100 align-items-center text-center text-lg-start">
+        <!-- Texts & Btn -->
+        <div class="col-12 col-lg-6">
+          <div #heroText class="hero-text">
+            <h1 class="text-dark">
+              Discover Delicious <br>
+              Daily
+              <!-- title word icon -->
+             <app-title-word-icon word="Recipes"></app-title-word-icon>
+            </h1>
+            <p class="fs-4 text-secondary mt-3 mb-4">
+              Discover the art of cooking nutritious and mouthwatering dishes with me.
+            </p>
+            <app-main-btn [arrowDir]="arrowDirs.topRight" label="All Recipes"></app-main-btn>
+          </div>
+        </div>
+        
+        <!-- Coocking video -->
+        <div class="col-12 col-lg-6 d-none d-lg-inline-flex justify-content-center mb-5">
+          <img #cookingVideo class="cooking-img img-fluid rounded-circle" alt="cooking gif"
+            src="assets/images/coock.gif" />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

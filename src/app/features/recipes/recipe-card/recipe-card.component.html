@@ -1,0 +1,38 @@
+<a href="#" class="card border-0 shadow-sm mt-3 mb-3 text-decoration-none">
+  <div class="position-relative rounded-top-3 overflow-hidden">
+    <img [src]="recipe.img" class="card-img-top" alt="recipe card image">
+
+    <!-- card badge -->
+    <a
+      class="badge-card border-white position-absolute px-3 py-2 btn text-decoration-none text-dark fs-6 fw-semibold bg-white shadow-lg rounded-pill">
+      <app-category-icon [category]="recipe.category"></app-category-icon>
+      {{recipe.category}}
+    </a>
+
+    <div class="container blur-bg w-100 py-3">
+      <!-- recipe short details -->
+      <div class="d-flex text-dark text-center fs-6">
+        <div class="flex-grow-1">
+          <fa-icon [icon]="faClock" class="fa-lg"></fa-icon>
+          {{recipe.time}} Min
+        </div>
+        <div class="flex-grow-1">
+          <fa-icon [icon]="faUser" class="fa-lg"></fa-icon>
+          {{recipe.servings}} Servings
+        </div>
+        <div class="flex-grow-1">
+          <fa-icon [icon]="faSignal" class="fa-lg"></fa-icon>
+          {{recipe.difficulty}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body d-inline-flex flex-column p-4">
+    <h5 class="flex-grow-1 card-title fw-semibold text-dark">{{recipe.title}}</h5>
+    <p class="flex-grow-1 card-text text-secondary">{{recipe.description}}
+    </p>
+    <!-- animated link -->
+    <a href="#" class="align-self-start fw-semibold">View Recipe</a>
+  </div>
+</a>

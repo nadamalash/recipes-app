@@ -1,0 +1,38 @@
+<a class="card mb-3 border shadow overflow-hidden text-decoration-none">
+  <div class="d-flex flex-column flex-lg-row h-100 no-gutters">
+    <!-- left side -->
+    <div class="left position-relative w-100 w-md-50">
+      <img [src]="recipe.img" class="img-fluid h-100 w-100">
+      <!-- card badge -->
+      <a
+        class="badge-card border-white position-absolute px-3 py-2 btn text-decoration-none text-dark fs-6 fw-semibold bg-white shadow-lg rounded-pill">
+        <app-category-icon [category]="recipe.category"></app-category-icon>
+        {{recipe.category}}
+      </a>
+    </div>
+
+    <!-- right side -->
+    <div class="right w-100 w-md-50 d-flex flex-column justify-content-center p-5">
+      <div class="flex-grow-1">
+        <!-- recipe short details -->
+        <div class="d-flex text-primary fs-6 pt-1 pt-lg-3 pb-3 mb-0 mb-lg-3">
+          <div class="flex-grow-1">
+            <fa-icon [icon]="faClock" class="fa-lg"></fa-icon>
+            {{recipe.time}} Min
+          </div>
+          <div class="flex-grow-1">
+            <fa-icon [icon]="faUser" class="fa-lg"></fa-icon>
+            {{recipe.servings}} Servings
+          </div>
+          <div class="flex-grow-1">
+            <fa-icon [icon]="faSignal" class="fa-lg"></fa-icon>
+            {{recipe.difficulty}}
+          </div>
+        </div>
+        <h3 class="fw-bold text-dark mb-2 mb-lg-4">{{recipe.title}}</h3>
+        <p class="fs-6 text-secondary mb-3 mb-lg-4">{{recipe.description}}</p>
+      </div>
+      <app-main-btn class="flex-grow-1" [label]="btnLabel" [arrowDir]="arrowDir" (click)="onViewClicked()"></app-main-btn>
+    </div>
+  </div>
+</a>

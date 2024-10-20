@@ -1,0 +1,16 @@
+<!----------------------------------- Category Recipes Section ----------------------------------------->
+<section class="page-padding bg-light pb-0 pb-md-5">
+  <div appAppearAnimation [isFirstSec]="true" class="container pb-5">
+    <h2 class="text-dark mt-3 mt-md-4 mb-5">Breakfast
+      <!-- title word icon -->
+      <app-title-word-icon word="Recipes"></app-title-word-icon>
+    </h2>
+    <!-- recipes list -->
+    <app-recipe-list [recipes]="recipes"></app-recipe-list>
+
+    <!-- main btn -->
+    <div class="mt-3 text-center">
+      <app-main-btn [arrowDir]="arrowDirs.topRight" label="Next"></app-main-btn>
+    </div>
+  </div>
+</section>

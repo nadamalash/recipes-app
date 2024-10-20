@@ -1,0 +1,35 @@
+
+$primary: #ff8800;
+$light: #ffebb5;
+
+.cat-element {
+  height: 13rem;
+
+  a.rounded-card {
+    width: 13.5rem;
+    height: 13.5rem;
+    font-size: 1.25rem;
+    color: $primary;
+    transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease,
+      font-size 0.3s ease;
+
+    &:hover {
+      width: 14.5rem;
+      height: 14.5rem;
+      font-size: 1.5rem;
+      background-color: $light !important;
+
+      ::ng-deep app-category-icon svg {
+        width: 4.5rem;
+        height: 4.5rem;
+      }
+    }
+
+    ::ng-deep app-category-icon svg {
+      width: 3.5rem;
+      height: 3.5rem;
+      fill: $primary;
+      transition: width 0.3s ease, height 0.3s ease;
+    }
+  }
+}

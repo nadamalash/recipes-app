@@ -1,0 +1,59 @@
+<footer class="text-start px-4 text-lg-start">
+  <div appAppearAnimation class="container mt-5">
+    <div class="row mt-3">
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <a href="!#"> <img src="assets/images/logo.png" alt="logo image" class="img-fluid" /></a>
+        <p class="text-secondary">
+          Join me on a journey of delicious, nutritious recipes that transform fresh ingredients into wholesome meals,
+          making every bite an exciting and healthy experience. </p>
+      </div>
+
+      <div class="col-md-2  mb-4">
+        <h6 class="fw-bold mb-4 text-primary">
+          Navigation
+        </h6>
+        <a href="#!" class="text-dark fw-semibold text-decoration-none mb-3 d-block">Home</a>
+        <a href="#!" class="text-dark fw-semibold text-decoration-none mb-3 d-block">About Me</a>
+        <a href="#!" class="text-dark fw-semibold text-decoration-none mb-3 d-block">Recipes</a>
+        <a href="#!" class="text-dark fw-semibold text-decoration-none mb-3 d-block">Contact Me</a>
+      </div>
+
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="fw-bold mb-4 text-primary">
+          Categories
+        </h6>
+        @for (cat of categories; track cat)
+        { <a href="#!" class="text-dark fw-semibold text-decoration-none mb-3 d-block">
+          <app-category-icon class="cat-icon me-1" category="{{cat}}"></app-category-icon>
+          {{cat}}
+        </a>
+        }
+      </div>
+
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-4">
+        <h6 class="fw-bold mb-4 text-primary">
+          Follow Me
+        </h6>
+
+        <!-- Section: Social media -->
+        <div class="d-flex gap-4">
+          <a href="!#">
+            <fa-icon [icon]="faXTwittwer" class="text-dark fa-xl"></fa-icon>
+          </a>
+          <a href="!#">
+            <fa-icon [icon]="faFacebook" class="text-dark fa-xl"></fa-icon>
+          </a> <a href="!#">
+            <fa-icon [icon]="faInstagram" class="text-dark fa-xl"></fa-icon>
+          </a> <a href="!#">
+            <fa-icon [icon]="faLinkedin" class="text-dark fa-xl"></fa-icon>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Copyright -->
+    <div class="text-center text-secondary p-4 fs-6">
+      © 2024 Copyright:
+      <a class="text-reset fw-bold" href="#">NadaMalash.com</a>
+    </div>
+  </div>
+</footer>

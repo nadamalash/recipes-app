@@ -1,0 +1,66 @@
+//Colors
+$primary: #ff8800;
+$light: #fff4d4;
+$dark: #020202;
+
+.navbar {
+  transition: background-color 0.2s ease;
+
+  .navbar-brand {
+    img {
+      height: 2.5rem;
+    }
+  }
+
+  .navbar-nav {
+    .dropdown .nav-link {
+      ::ng-deep fa-icon svg {
+        transform: rotate(0deg);
+        fill: $dark;
+        transition: fill 0.1s, transform 0.3s;
+      }
+
+      &:hover {
+        color: $primary;
+        ::ng-deep fa-icon svg {
+          fill: $primary;
+        }
+      }
+
+      &[aria-expanded="true"] {
+        color: $primary !important;
+        ::ng-deep fa-icon svg {
+          transform: rotate(180deg);
+          fill: $primary;
+        }
+      }
+    }
+
+    :not(.dropdown) .nav-link {
+      &:focus,
+      &:active {
+        text-decoration: underline;
+        text-decoration-thickness: 0.125rem;
+        text-underline-offset: 0.5rem;
+      }
+    }
+
+    .dropdown-item {
+      line-height: 3rem;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $light !important;
+      }
+      ::ng-deep app-category-icon {
+        svg {
+          fill: $primary;
+          width: 2rem;
+          height: 1.8rem;
+          transform: translate(0%, -10%);
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,12 @@
+<section class="page-padding container text-center pb-0 pb-md-5">
+  <app-title-word-icon class="h2" word="Ingredients"></app-title-word-icon>
+  <ul class="list-unstyled px-4 row row-cols-2 row-cols-md-3 justify-content-center pb-4">
+    @for (ingredient of ingredients; let isLast = $last; track ingredient) {
+    <li class="mt-5 d-flex justify-content-center align-items-center gap-1" [class.me-auto]="isLast">
+      <fa-icon [icon]="faCircle" class="text-primary fa-lg"></fa-icon>
+        <p class="mb-0 text-dark fw-bold fs-4">180g</p>
+        <p class="mb-0 text-secondary fs-6">butter</p>
+    </li>
+    }
+  </ul>
+</section>

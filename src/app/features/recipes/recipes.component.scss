@@ -1,0 +1,16 @@
+section{
+  div > svg {
+    z-index: -1;
+  }
+  .page-padding {
+    padding-top: 4.69rem;
+  }
+
+app-main-badge{
+    top: 110px;
+    right: 10px;
+    @media (max-width: 767.98px) {
+      top: 55px;
+    }
+  }
+}

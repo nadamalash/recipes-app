@@ -1,0 +1,17 @@
+export const slides = [
+  'assets/images/food-slider1.jpg',
+  'assets/images/food-slider2.jpg',
+  'assets/images/food-slider3.jpg',
+  'assets/images/food-slider4.jpg',
+  'assets/images/food-slider5.jpg',
+  'assets/images/food-slider6.jpg',
+  'assets/images/food-slider7.jpg',
+  'assets/images/food-slider8.jpg',
+  'assets/images/food-slider9.jpg',
+  'assets/images/food-slider10.jpg',
+  'assets/images/food-slider11.jpg',
+  'assets/images/food-slider12.jpg',
+  'assets/images/food-slider13.jpg',
+  'assets/images/food-slider14.jpg',
+  'assets/images/food-slider15.jpg',
+];

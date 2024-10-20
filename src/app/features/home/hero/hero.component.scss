@@ -1,0 +1,29 @@
+header {
+  // Background direct child
+  div > svg {
+    z-index: -1;
+  }
+  .page-padding {
+    padding-top: 4.69rem;
+  }
+  .hero-text {
+    opacity: 0;
+    transform: translateY(6.25rem);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+
+    &.animate {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .cooking-img {
+    width: 25rem;
+    opacity: 0;
+    transition: width 0.8s ease, opacity 0.8s ease;
+
+    &.grow {
+      width: 32.5rem;
+      opacity: 0.8;
+    }
+  }
+}

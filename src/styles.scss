@@ -1,31 +1,28 @@
+:root {
+  box-sizing: border-box;
+}
 //Fonts
 $font-family-sans-serif: "Inter", sans-serif;
+$h1-font-size: 3.9rem;
+$h2-font-size: 3.125rem;
+$h3-font-size: 2.1rem;
 
 //Colors
 $primary: #ff8800;
 $secondary: #858585;
-$light: #fefae0;
+$light: #fff4d4;
 $dark: #020202;
 
-//Borders
-$border-widths: (
-  0: 0px,
-  1: 1px,
-  2: 2px,
-  3: 3px,
-  4: 4px,
-  5: 5px,
-);
-
 //Navbar
-$navbar-padding-y: 1rem;
+$nav-link-font-size: 1.1rem;
 $navbar-light-color: $dark;
-$navbar-light-icon-color: $dark;
 $navbar-light-hover-color: $primary;
-$navbar-toggler-focus-width: 0rem;
-$nav-link-font-size: 17px;
 
-//Shadow
-$box-shadow: 0 0.5rem 1rem rgba($dark, 0.05);
+//Buttons
+$btn-font-size: 1.1rem;
+
+//Cards
+$card-border-radius: 0.625rem;
+
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

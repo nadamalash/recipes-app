@@ -1,0 +1,32 @@
+$primary: #ff8800;
+$light: #fff4d4;
+
+.badge-section {
+  ::ng-deep fa-icon svg {
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+  }
+
+  &[aria-expanded="true"] {
+    ::ng-deep fa-icon svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.dropdown-item {
+  line-height: 3rem;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $light !important;
+  }
+  ::ng-deep app-category-icon {
+    svg {
+      fill: $primary;
+      width: 2rem;
+      height: 1.8rem;
+      transform: translate(0%, -10%);
+    }
+  }
+}

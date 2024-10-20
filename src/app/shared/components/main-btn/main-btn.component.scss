@@ -1,0 +1,29 @@
+$primary: #ff8800;
+
+button {
+  color: $primary;
+  &:hover {
+    color: white !important;
+    ::ng-deep .top-right svg {
+      fill: white;
+      transform: rotate(-45deg) translate(0.1rem, -0.1rem);
+    }
+
+    ::ng-deep .top-left svg {
+      fill: white;
+      transform: rotate(-135deg) translate(0.1rem, 0.1rem);
+    }
+  }
+
+  ::ng-deep .top-right svg {
+    fill: $primary;
+    transition: fill 0.3s, transform 0.3s;
+    transform: rotate(-45deg);
+  }
+
+  ::ng-deep .top-left svg {
+    fill: $primary;
+    transition: fill 0.3s, transform 0.3s;
+    transform: rotate(-135deg);
+  }
+}

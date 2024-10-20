@@ -1,0 +1,45 @@
+<!----------------------------------- Recipe Details First Section ----------------------------------------->
+<section id="cardDetails">
+  <div class="container-fluid vh-100 position-relative">
+    <!-- Background -->
+    <svg class="h-100 position-absolute top-0 end-0" viewBox="0 0 345 625" xmlns="http://www.w3.org/2000/svg">
+      <path opacity="0.3"
+        d="M56.6667 625L94.1667 572.917C131.667 520.833 206.667 416.667 198.854 312.5C191.042 208.333 100.417 104.167 55.1042 52.0833L9.79169 0H329.583L321.771 52.0833C313.958 104.167 298.333 208.333 254.583 312.5C210.833 416.667 138.958 520.833 103.021 572.917L67.0834 625H56.6667Z"
+        fill="#FFBE0B" fill-opacity="0.25" />
+      <path
+        d="M56.9791 625L92.9166 572.917C128.854 520.833 200.729 416.667 244.479 312.5C288.229 208.333 303.854 104.167 311.667 52.0833L319.479 0H526.771V52.0833C526.771 104.167 526.771 208.333 526.771 312.5C526.771 416.667 526.771 520.833 526.771 572.917V625H56.9791Z"
+        fill="#FFBE0B" fill-opacity="0.3" />
+    </svg>
+
+    <div appAppearAnimation [isFirstSec]="true"
+      class="page-padding h-100 pb-3 pb-lg-5 d-flex flex-column justify-content-center align-items-center gap-3 gap-lg-4">
+      <h2 class="text-dark pt-0 pt-lg-4">Recipe
+        <!-- title word icon -->
+        <app-title-word-icon word="Details"></app-title-word-icon>
+      </h2>
+      <app-recipe-details-card [recipe]="recipes[0]"
+        (showIngredsSection)="scrollToIngredsSection($event)"></app-recipe-details-card>
+    </div>
+  </div>
+</section>
+<!----------------------------------- Recipe Details Sec Section ----------------------------------------->
+@if(isIngredsShow){
+<app-recipe-details appAppearAnimation id="ingredientSec" [ingredients]="ingredients"></app-recipe-details>
+}
+<!----------------------------------- All Recipes Section ----------------------------------------->
+<section class="bg-light pb-0 pb-md-5">
+  <div appAppearAnimation class="container py-5 position-relative">
+    <h2 class="text-dark mt-0 mt-md-5 mb-5">All
+      <!-- title word icon -->
+      <app-title-word-icon word="Recipes"></app-title-word-icon>
+    </h2>
+    <!-- recipes list -->
+    <app-recipe-list [recipes]="recipes"></app-recipe-list>
+    <!-- main badge -->
+    <app-main-badge class="position-absolute"></app-main-badge>
+    <!-- main btn -->
+    <div class="mt-5 text-center">
+      <app-main-btn [arrowDir]="arrowDirs.topRight" label="Next"></app-main-btn>
+    </div>
+  </div>
+</section>

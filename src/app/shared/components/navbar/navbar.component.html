@@ -1,0 +1,57 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg shadow-sm fixed-top"
+  [ngClass]="(isNavBarExpanded || isNavBarScrolled)?'bg-white':'bg-transparent'">
+  <!-- Container wrapper -->
+  <div class="container px-1  pb-lg-0 ">
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">
+      <img src="assets/images/logo.png" alt="logo image" class="img-fluid" />
+    </a>
+
+    <!-- Toggle button -->
+    <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" (click)="toggleNavbar()" aria-expanded="false">
+      <fa-icon [icon]="faBars" class="fa-lg text-dark"></fa-icon>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse pb-3 pb-lg-0" id="navbarSupportedContent">
+      <!-- Links -->
+      <ul class="navbar-nav ms-auto me-auto py-2 py-lg-0 px-2 px-lg-0 mt-1 fw-semibold">
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Me</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Recipes</a>
+        </li>
+
+        <!-- Categories Dropdown -->
+        <li class="nav-item dropdown">
+          <a #catMenuLink class="nav-link text-dark text-decoration-none" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false" data-bs-target="#catMenu">
+            Categories 
+            <fa-icon [icon]="faChevronDown" class="fa-2xs"></fa-icon>
+          </a>
+          <ul #catMenu id="catMenu" class="dropdown-menu p-2 shadow-sm border-light rounded-3"
+            aria-labelledby="navbarDropdown">
+            @for (cat of categories; track cat)
+            {<li>
+              <a class="dropdown-item text-primary" href="#">
+                <app-category-icon class="cat-icon me-1" category="{{cat}}"></app-category-icon>
+                {{cat}}
+              </a>
+            </li>}
+          </ul>
+        </li>
+      </ul>
+      <!-- Main Btn -->
+      <app-main-btn [arrowDir]="arrowDirs.topRight" label="Contact Me"></app-main-btn>
+    </div>
+  </div>
+</nav>

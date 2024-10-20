@@ -1,0 +1,30 @@
+<section class="overflow-hidden">
+  <h2 appAppearAnimation [isFirstSec]="isFirst" class="text-dark mb-5 text-center">About
+    <!-- title word icon -->
+    <app-title-word-icon word="Me"></app-title-word-icon>
+  </h2>
+
+  <div appAppearAnimation [isFirstSec]="isFirst"
+    class="row align-items-center justify-content-between pb-0 pb-md-5 flex-wrap-reverse text-center text-lg-start">
+
+    <!-- left side -->
+    <div class="col-12 col-lg-6 ">
+      <div class="container w-75">
+        <h2 class="text-dark">Auguste Gusteau</h2>
+        <p class="fs-4 text-secondary mt-3 mb-4">
+          The man who transformed his passion for cooking into a digital culinary empire, Auguste Gusteau, inspires food
+          lovers worldwide with creative and delicious recipes. His blend of tradition and innovation encourages people
+          to find joy in crafting meals that bring people together.
+        </p>
+        <!-- Main Btn -->
+        <app-main-btn [arrowDir]="arrowDirs.topRight" [ngClass]="{'d-none':!isBtnVisible}"
+          label="Learn More"></app-main-btn>
+      </div>
+    </div>
+
+    <!-- right side -->
+    <div class="col-12 col-lg-6 mb-5 mb-md-0">
+      <img class="img-fluid rounded-start-5" alt="chef image" src="assets/images/chef1.jpg">
+    </div>
+  </div>
+</section> 

@@ -1,0 +1,21 @@
+<section class="bg-light py-5 overflow-hidden ps-0 ps-lg-5">
+  <div appAppearAnimation class="container d-flex justify-content-center align-items-center position-relative">
+    
+    <a href="#" class="instagram-text text-decoration-none fs-5 text-dark fw-semibold d-inline-flex align-items-center gap-2">
+      <fa-icon [icon]="faInstagram" class="text-primary fa-lg"></fa-icon>
+      Instagram
+    </a>
+    
+    <div class="carsouel container ms-2 ps-5">
+      <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+        @for (slide of slides; track slide) {
+        <div ngxSlickItem class="slide px-1">
+          <a href="#">
+            <img class="rounded-3 img-fluid slick-img" [src]="slide" alt="image slide">
+          </a>
+        </div>
+        }
+      </ngx-slick-carousel>
+    </div>
+  </div>
+</section>

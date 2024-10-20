@@ -1,0 +1,15 @@
+<button class="btn btn-outline-primary text-primary border-2 fw-semibold">
+  @switch (arrowDir) {
+  @case(arrowDirs.topRight){
+  {{label}}
+  <fa-icon [icon]="faArrowRight" class="top-right fa-sm"></fa-icon>
+  }
+  @case(arrowDirs.topLeft){
+  <fa-icon [icon]="faArrowRight" class="top-left fa-sm"></fa-icon>
+  {{label}}
+  }
+  @default {
+  {{label}}
+  }
+  }
+</button>
